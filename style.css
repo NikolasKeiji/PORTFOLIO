@@ -68,7 +68,7 @@ position: absolute;
   width: 100%;
   height: 16vh;
   z-index: 10;
-
+}
   .logo {
     height: 8vh;
     display: flex;
@@ -89,7 +89,7 @@ position: absolute;
   align-items: center;
   justify-content: center;
   }
-}
+
 
  .menu {
   position: fixed;
@@ -129,7 +129,7 @@ button {
             background-image: url(imagens/222.png);
             background-position: 50% 100%;
             background-size: cover;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             
             }
@@ -138,15 +138,15 @@ button {
                
                 display: flex;
                 align-items: center;
-                width: 100vw;
+                width: 100%;
                 height: 50vh;
                 justify-content: space-between;
                 
                 
             }
                 .Minhafoto {
-                          width: 30vw;
-                          height: 50vh;
+                          width: 32vw;
+                          height: 40vh;
                           display: flex;
                           margin-right: 4v;
 
@@ -330,28 +330,30 @@ button {
     z-index: 2;
   }
 
-                    .softskill {
-                        
-                        width: 40vw;
-                        height: 18vh;
-                        padding-left: 5%;
-                        padding-top: 2vh;
-                        list-style-type: none;
-                        align-items: center;
-                        .um {
-                            padding-left: 34%;
-                        }
-                        .dois {
-                            padding-left: 33%;
-                        }
-                        .tres {
-                            padding-left: 39%;
-                        }                           
-                        .quatro {
-                            padding-left: 41%;
-                        }
-                        
-                    }
+                   .softskill {
+  width: 40vw;
+  height: 18vh;
+  padding-left: 5%;
+  padding-top: 2vh;
+  list-style-type: none;
+  align-items: center;
+}
+
+.softskill .um {
+  padding-left: 34%;
+}
+
+.softskill .dois {
+  padding-left: 33%;
+}
+
+.softskill .tres {
+  padding-left: 39%;
+}
+
+.softskill .quatro {
+  padding-left: 41%;
+}
 
                    .projetos {
               background-image: url(imagens/4.png);
@@ -380,6 +382,7 @@ button {
                           }
   #projetos {
   perspective: 1200px;
+  transform-style: preserve-3d;
 }
 
 .container-projetos {
@@ -454,6 +457,7 @@ z-index: 11;
   z-index: 1;
 }
 
+
 .conteudo-cursos {
   position: relative;
   z-index: 2;
@@ -487,6 +491,9 @@ z-index: 11;
 
                          .contato {
                               position: relative;
+                              display: flex;
+  flex-direction: column;
+  align-items: center;
                               padding: 120px 5%;
                               background-position: center;
                               background-size: cover;
@@ -500,37 +507,37 @@ z-index: 11;
                         }
 
                             .fundin {
-                              position: absolute;
-                              top: 50%;
-                              left: 50%;
-                              width: 100%;
-                              height: 100%;
-                              object-fit: cover;
-                              transform: translate(-50%, -50%);
-                              z-index: -1;
-                              opacity: 0.2;
-                              filter: blur(10px);
-                              .contato {
-                                position: relative;
-                                padding: 120px 5%;
-                            }
-                          }
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  opacity: 0.2;
+  filter: blur(10px);
+}
 
                            .NK {
-                              display: flex;
-                              align-items: center;
-                              justify-content: space-between;
-                              margin-bottom: 80px;
-                            }
+  display: flex;
+  flex-direction: column;   /* 🔥 coloca um embaixo do outro */
+  align-items: center;      /* 🔥 centraliza horizontal */
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 60px;
+  text-align: center;
+}
 
-                            .NKK {
-                              width: 80px;
-                              
-                            }
+.NKK {
+  width: 90px;
+}
 
-                            .NIkolas {
-                              font-size: 20px;
-                            }
+.NIkolas {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
 
                             
                           .container {
@@ -574,12 +581,104 @@ z-index: 11;
                           .behance span {
                             font-size: clamp(24px, 1.5vw, 24px);
                           }
+
+                            /* mostra botão */
+
                        
      @keyframes textoinfinito {
       100% {
           transform: translateX (-100%)
       }
      }               
+
+     @media (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    height: 90vh;
+    padding: 20px;
+  }
+
+  /* SOBRE */
+  .sobre {
+    width: 100%;
+    height: auto;
+    padding: 80px 20px;
+  }
+
+  .textsobre {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    text-align: center;
+  }
+
+  .texto-sobre {
+    width: 100%;
+    font-size: 16px;
+    padding: 0;
+  }
+
+  .Minhafoto {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .Minhafoto img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* CARDS */
+  .cards {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  .cards div {
+    width: 100%;
+    height: 44px;
+    font-size: 13px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  /* SKILLS */
+  .skills {
+    padding: 80px 20px;
+  }
+
+  .hardtext,
+  .softtext {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* PROJETOS */
+  .container-projetos {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* CONTATO */
+  .container {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .glass-btn {
+    justify-content: center;
+  }
+
+}
 
      @media (max-width: 768px) {
     .menu {
@@ -627,23 +726,23 @@ z-index: 11;
   }
 
   .h2s {
-    padding-top: 60px;
-    padding-left: 40%;
+    padding-top: 2;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
 
-  .textsobre {
+ .textsobre {
     flex-direction: column;
+    gap: 30px;
     height: auto;
-    gap: 32px;
-    padding-top: 40px;
-    text-align: justify;
+    text-align: center;
   }
 
-  .texto {
+  .texto-sobre {
     width: 100%;
     font-size: 16px;
-    text-align: center;
-    padding-left: 6vw;
+    padding-top: 20px;
   }
 
   .Minhafoto {
@@ -833,3 +932,122 @@ z-index: 11;
 }
 
 
+/* ============================= */
+/* CONTROLE DE VISIBILIDADE */
+/* ============================= */
+
+/* Desktop padrão */
+.menu {
+  display: flex;
+}
+
+.menu-btn,
+.menu-overlay {
+  display: none;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+  /* some desktop */
+  .menu {
+    display: none;
+  }
+
+
+.menu-btn {
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 28px;
+  height: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 9999;
+} 
+  .menu-btn span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s;
+  }
+
+  .menu-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: rgba(10, 10, 10, 0.98);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 40px;
+
+  transform: translateX(100%);
+  transition: 0.4s ease;
+
+  z-index: 2147483647;
+}
+.menu-overlay.active {
+  transform: translateX(0);
+}
+.menu-overlay a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 2px;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.menu-overlay a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #8A2BE2;
+  transition: 0.4s ease;
+}
+
+.menu-overlay a:hover {
+  color: #8A2BE2;
+  transform: translateY(-3px);
+}
+
+.menu-overlay a:hover::after {
+  width: 100%;
+}
+.menu-overlay a {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.menu-overlay.active a {
+  animation: fadeUp 0.6s forwards;
+}
+
+.menu-overlay.active a:nth-child(1) { animation-delay: 0.1s; }
+.menu-overlay.active a:nth-child(2) { animation-delay: 0.2s; }
+.menu-overlay.active a:nth-child(3) { animation-delay: 0.3s; }
+.menu-overlay.active a:nth-child(4) { animation-delay: 0.4s; }
+.menu-overlay.active a:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+}
